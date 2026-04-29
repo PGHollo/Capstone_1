@@ -1,14 +1,6 @@
-# Capstone_1
+EmporiUm - East Region Sales Analysis
+This project analyzes sales performance for the East region using SQL and Excel. The goal was to answer key business questions about total revenue, monthly sales trends, product category performance, and store rankings.
+SQL was used to connect sales data with store location and management region data. The queries calculated total revenue, the sales date range, monthly revenue, average transaction size, and store performance rankings.
+Excel was used to create PivotCharts that make the results easier to understand. The charts show revenue by state and highlight the top-performing stores in the East region.
+Overall, this project helps identify where sales are strongest and where the sales team should focus attention next quarter.
 
-You have started a job as a data analyst for a growing business, EmporiUm, a student bookstore chain
-that also sells tech products, art supplies, and other products both in-store and online. Sales are
-segmented by region and within each region by sales territory (in-store or online, including one or more
-states).
-A sales manager has asked you for some information related to their sales territory (as assigned by your
-instructor). You will need to write a .sql script to find the answers to the manager’s questions. For one of
-the questions, you will export the results to .csv and use that to create a Pivot Chart to accompany your
-analysis. Your video demo and live presentation should share the results of this analysis.
-Additionally if time permits, your team manager has sent you a number of other questions to investigate
-and respond to using the sales database (in the Appendix). Create a second .sql script for the queries
-you use to explore these questions and save it to your project repository. This can optionally be included
-in your video demo as well.
