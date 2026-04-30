@@ -24,3 +24,7 @@ The main takeaway from the project is that the sales team should focus on the st
 
 Overall, this project helped me practice connecting tables in SQL, using functions like SUM, COUNT, AVG, MIN, and MAX, and turning raw data into a clear business recommendation.
 
+
+
+AI was integral to the completion of this task for me as a beginner, it assisted me with fixing my syntax errors, recognizing connections between data as well as helping to clean the Sample\_Sale dataset as it was giving me errors in the beginning!
+
