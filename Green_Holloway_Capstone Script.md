@@ -270,7 +270,7 @@ The query uses:
 
 * SUM() to calculate revenue for each store
 * COUNT() to count the number of transactions
-* RANK() to rank stores from highest revenue to lowest revenue
+* DESC to rank stores from highest revenue to lowest revenue
 
 
 
@@ -282,17 +282,9 @@ SELECT
 
 &#x20;   sl.State,
 
-&#x20;   m.Region,
+&#x20;   SUM(ss.Sale\_Amount) AS total\_revenue,
 
-&#x20;   ROUND(SUM(ss.Sale\_Amount), 2) AS total\_revenue,
-
-&#x20;   COUNT(\*) AS number\_of\_transactions,
-
-&#x20;   RANK() OVER (
-
-&#x20;       ORDER BY SUM(ss.Sale\_Amount) DESC
-
-&#x20;   ) AS sales\_rank
+&#x20;   COUNT(\*) AS total\_transactions
 
 FROM Store\_Sales ss
 
@@ -312,11 +304,9 @@ GROUP BY
 
 &#x20;   sl.StoreLocation,
 
-&#x20;   sl.State,
+&#x20;   sl.State
 
-&#x20;   m.Region
-
-ORDER BY sales\_rank;
+ORDER BY total\_revenue DESC;
 
 
 
@@ -393,6 +383,4 @@ Closing Statement
 
 
 Overall, SQL helped me pull and organize the East region sales data, while Excel helped me turn the results into visuals. The main takeaway is that the East region should focus on its strongest stores and product categories, while also using the data to improve lower-performing locations.
-
-
 

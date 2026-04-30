@@ -82,24 +82,19 @@ ORDER BY
     sl.StoreId,
     sl.StoreLocation,
     sl.State,
-    m.Region,
-    ROUND(SUM(ss.Sale_Amount), 2) AS total_revenue,
-    COUNT(*) AS number_of_transactions,
-    RANK() OVER (
-        ORDER BY SUM(ss.Sale_Amount) DESC
-    ) AS sales_rank
+    SUM(ss.Sale_Amount) AS total_revenue,
+    COUNT(*) AS total_transactions
 FROM Store_Sales ss
 JOIN Store_Locations sl
     ON ss.Store_ID = sl.StoreId
 JOIN Management m
     ON sl.State = m.State
-WHERE m.Region = 'East'
+WHERE m.Region = 'EAST'
 GROUP BY
     sl.StoreId,
     sl.StoreLocation,
-    sl.State,
-    m.Region
-ORDER BY sales_rank;
+    sl.State
+ORDER BY total_revenue DESC;
 
 /* I recommend focusing next quarter on the Northeast stores that are already bringing in the most revenue. These stores are showing strong customer demand, so giving them more inventory, promotions, and sales support could help increase sales even more.
 I would also review the lower-performing stores to see what they are missing, such as better product selection, local advertising, or staff support. 
