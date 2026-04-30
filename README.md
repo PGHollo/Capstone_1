@@ -16,7 +16,7 @@ I also looked at product categories to see how many transactions happened each m
 
 
 
-For the Excel part, I used the query results to create a dashboard. I included charts for revenue by state and top stores by revenue. I also made the dashboard interactive so it would be easier to filter and compare results.
+For the Excel part, I used the query results to create a dashboard. I included charts for revenue by state and top stores by revenue. 
 
 
 
